@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="service_item">
-                            <img src="/arects/images/archi1.PNG" alt="Our Services" style="height:260px"/>
+                            <img src="/arects/images/archh.PNG" alt="Our Services" style="height:260px"/>
                             <h3>ARCHITECTURE</h3>
                             <!-- <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p> -->
                             <!-- <a href="#services" class="btn know_btn" data-toggle="modal" data-target="#serviceModal">know more</a> -->
@@ -106,9 +106,7 @@
           </button>
         </div>
         <div class="modal-body">
-       <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-
-       <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+       <p> </p>
 
 </p>
 

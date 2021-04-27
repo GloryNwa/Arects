@@ -8,40 +8,46 @@ use Illuminate\Support\Facades\URL;
 use Auth;
 use DB;
 use App\Portfolio;
+use App\Ongoing;
 
 class PortfolioController extends Controller
 {
+
+    public function portfolios(){
+      $data['portfolio'] = Portfolio::orderBy('id','desc')->paginate(10);
+      $data['ongoing']   = Ongoing::orderBy('id','desc')->paginate(10);
    
+        return view('portfolios',$data);
+   }
 
-    public function portfolio()
-    {
-        
-        return view('portfolio');
-    }
+//    public function ongoing(){
+//     $port = Ongoing::orderBy('id','desc')->paginate(10);
 
+//     return view('portfolios',['port' => $port]);
+//  }
+
+
+
+  
     ///////////////////////////////////uploadPortfolio//////////////////////////////////////////////
 
     public function uploadPortfolio(){
 
         return view('admin.portfolio.uploadPortfolio');
    }
-
-
-   
-   public function port(request $request){
-    $this->validate($request, [
-        
-        'bigtitle' => 'required',
-        'smalltitle' => 'required',
-        'desc' => 'required',
+  
+   //////////////////////////Past Project Method////////////////////////////////  
+   public function portfolio(request $request){
+     $this->validate($request, [
+       
+        'descript' => 'required',
         'file'=> 'required'
     
       ]);  
        // return 'validation passed';
-       $about = new About;
-       $about->bigtitle = $request->input('bigtitle');
-       $about->smalltitle = $request->input('smalltitle');
-       $about->desc = $request->input('desc');
+       $port = new Portfolio;
+       $port->descript = $request->input('descript');
+     
     
     if(Input::hasFile('file')){
         $file = Input::file('file');
@@ -50,14 +56,28 @@ class PortfolioController extends Controller
         // return $url;
         // exit();
     
-            $about->file = $url;
-            $about->save();
-            echo('yes');
-            return redirect('/uploadPortfolio')->with('response', 'Profile Added Successfully');
+            $port->file = $url;
+            $port->save();
+           
+            return redirect('/past/projects')->with('response', 'Upload went through Successfully');
     }else{
-            return redirect('/uploadPortfolio')->with('response', 'Error occured, try it again later');
+            return redirect('/past/projects')->with('response', 'Error occured, try again later');
+      }
     }
+
+
+    public function managePortfolio(){
+
+     $portfolio = Portfolio::orderBy('id','desc')->paginate(10);
+        return view('admin.portfolio.managePortfolio',['portfolio'=> $portfolio]);
     }
+
+    public function deletePortfolio($id){
+
+        Portfolio::where('id', $id)->delete($id);
+        return redirect('/manage/past/projects')->with('message', 'Post deleted duccessfully');
+  }
+    
 }
 
 

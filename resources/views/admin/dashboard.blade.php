@@ -15,136 +15,129 @@
                 </div>
             </div>
             <div class="row clearfix w_social3">
-                <div class="col-lg-6 col-md-6 col-xs-6">
+                <div class=" col-md-12 ">
                 <div class="card instagram-widget">
                 <div class="card top_counter">
                         <div class="body">
                             <div class="icon"><i class="fa fa-briefcase" style="color:black"></i> </div>
                             <div class="content">
-                                <div class="text">Newly Employees</div>
-                                <h5 class="number">22</h5>
+                                <div class="text">Contact Messages</div>
+                                <h5 class="number">{{count($countContact)}}</h5>
                             </div>
                           
                         </div>
                     </div>
                 </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-xs-6">
-                    <div class="card instagram-widget">
-                    <div class="card top_counter">
-                        <div class="body">
-                            <div class="icon"><i class="fa fa-users" style="color:black"></i> </div>
-                            <div class="content">
-                                <div class="text">All ICM Staff</div>
-                                <h5 class="number">22</h5>
-                            </div>
-                          
-                        </div>
-                    </div>
-                    </div>
-                </div>
-              
-
-				
-                
-
-            <div class="row clearfix">
-                <div class="col-lg-8 col-md-8">
-                    <div class="card">
+                </div>              
+          </div>
+        
+ <div class="row clearfix">
+<div class="col-md-12">
+    <div class="card">
+        <div class="body">
+        <div class="table-responsive">
+                <table class="table table-hover js-basic-example dataTable table-custom">
+                    <thead class="thead-blue"style="background:#007bff;color:white">
+                        <tr>
+                            <th>Name</th>
+                            <th>Emailt</th>
+                            <th>Phone</th>
+                            <th>Message</th>
+                            <th>Time</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
                   
-                        <div class="header">
-                         <div class="body">
-                           <div class="table-responsive">
-                                <table class="table table-hover js-basic-example dataTable table-custom">
-                                    <thead class="thead-blue"style="background:#007bff;color:white">
-                                        <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        
-                                        <th>message</th>
-                                        <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                 
-                                        <td>Erin Gonzales</td>
-                                            
-                                            <td><span>Android Developer</span></td>
-                                            <td><span>July</span></td>
-                                            <td><span class="badge badge-success">Exeptional</span></td>
-                                            <!-- <td><span class="sparkbar">2,-5,3,-6,-4,8,-1</span></td> -->
-                                            <td>
-                                               <button class="btn btn-sm btn-icon btn-pure btn-default on-default button-remove"
-                                            data-toggle="tooltip"  data-original-title="Remove"><a onclick="return confirm('Are you really sure?')" href='#'><i class="icon-trash" aria-hidden="true"></i>
-                                                </a></a>
+                    @if(session()->has('response'))
+                        <div class="alert alert-success">
+                            {{ session()->get('response') }}
+                        </div>
+                    @endif
+                    <tbody>
+                    @if(count($contacts)>0)
+                    <?php $x = 1;?>
+                        @foreach($contacts as $contact)
+                    <tr>
+                        <td>{{$x++}}</td>
+                            <td>{{$contact->Name}}</td>
+                            <td>{{$contact->email}}</td>
+                            <td>{{$contact->phone}}</td>
+                            <td>{{$contact->created_at}}</td>
+                            <td>
+                            <button class="btn btn-sm btn-icon btn-pure btn-default on-default button-remove"
+                            data-toggle="tooltip"  data-original-title="Remove"><a onclick="return confirm('Are you really sure?')" href='/delete/contact/{{$contact->id}}'><i class="icon-trash" aria-hidden="true"></i>
+                                </a></a>
+                           </td>
+                        </tr>
+                   
+                        @endforeach
+                        @else
 
-                                                <button class="btn btn-sm btn-icon btn-pure btn-default on-default button-remove"
-                                            data-toggle="tooltip"  data-original-title="Remove"><a onclick="return confirm('Are you really sure?')" href='#'><i class="icon-trash" aria-hidden="true"></i>
-                                                </a></a>
-                                           </td>
-                                        </tr>
-                                       
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        </div>
-                       
-                    </div>
-                </div>
+                <div class="alert alert-info">No Message Found, check back later!</div>
 
-                <div class="col-lg-4 col-md-4">
-                    <div class="card">
-                        <div class="header">
-                            <h2>ToDo List</h2>
-                        </div>
-                        <div class="body todo_list">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <label class="fancy-checkbox mb-0">
-                                        <input type="checkbox" name="checkbox" checked>
-                                        <span>New Employee intro</span>
-                                    </label>
-                                    <div class="m-l-35 m-b-30">
-                                        <small class="text-muted">SCHEDULED FOR 3:00 P.M. ON JUN 2018</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <label class="fancy-checkbox mb-0">
-                                        <input type="checkbox" name="checkbox">
-                                        <span>Send email to CEO</span>
-                                    </label>
-                                    <div class="m-l-35 m-b-30">
-                                        <small class="text-muted">SCHEDULED FOR 4:30 P.M. ON JUN 2018</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <label class="fancy-checkbox mb-0">
-                                        <input type="checkbox" name="checkbox">
-                                        <span>New Joing Employee Welcome kit</span>
-                                    </label>
-                                    <div class="m-l-35 m-b-30">
-                                        <small><a href="#">John Smith</a> Designer</small><br>
-                                        <small><a href="#">Hossein Shams</a> Developer</small><br>
-                                        <small><a href="#">Maryam Amiri</a> SEO</small><br>
-                                        <small><a href="#">Mike Litorus</a> iOS Developer</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <label class="fancy-checkbox mb-0">
-                                        <input type="checkbox" name="checkbox">
-                                        <span>Birthday Wish</span>
-                                    </label>
-                                    <div class="m-l-35">
-                                        <small class="text-muted">SCHEDULED FOR 4:30 P.M. ON JUN 2018</small>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
+                @endif
+                </tbody>
+            </table>
+            {{$contacts->links()}}
             </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="col-lg-4">
+    <div class="card">
+        <div class="body">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addevent">Add New Event</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="body">
+            <div class="event-name row">
+                <div class="col-3 text-center">
+                    <h4>11<span>Dec</span><span>2018</span></h4>
+                </div>
+                <div class="col-9">
+                    <h6>Conference</h6>
+                    <p>Mobile World Congress 2018</p>
+                    <address><i class="fa fa-map-marker"></i> 4 Goldfield Rd. Honolulu, HI 96815</address>
+                </div>
+            </div>                            
+           
+         
+            <div class="event-name row">
+                <div class="col-3 text-center">
+                    <h4>16<span>Dec</span><span>2018</span></h4>
+                </div>
+                <div class="col-9">
+                    <h6>Repeating Event</h6>
+                    <p>It is a long established fact that a reader will be distracted</p>
+                    <address><i class="fa fa-map-marker"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+            </div>
+            <div class="event-name row">
+                <div class="col-3 text-center">
+                    <h4>28<span>Dec</span><span>2018</span></h4>
+                </div>
+                <div class="col-9">
+                    <h6>Google</h6>
+                    <p>Google Hardware and Pixel 2 Launch</p>
+                    <address><i class="fa fa-map-marker"></i> 514 S. Magnolia St. Orlando, FL 32806</address>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!-- <div class="card">
+        <div class="body">
+            <button type="button" class="btn btn-primary btn-block"><a href="/manage/events/" style="color:white">Manage Event</a></button>
+        </div>
+    </div> -->
+</div> 
+
+
+</div>
 
 
            

@@ -12,9 +12,7 @@
         </button>
       </div>
       <div class="modal-body" style="height:200px; overflow:scroll">
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-      <br><br>
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -31,7 +29,7 @@
                     <div class="col-lg-4 col-sm-7">
                         <div class="footer_item">
                             <h4>About Arect</h4>
-                            <img class="logo" src="/arects/images/logoo.png" alt="Construction" />
+                            <img class="logo" src="/arects/images/logoo.png" alt="Construction" style="width:300px"/>
                             <p>We are Certified Engineers, CREATIVE & PROFESSIONAL<br>
                             O</span>ver the years, we have established a proven track record of managing and
                                     delivering construction projects on time, as well as an operational strategy to maintain a full profile of services  >>><a href="/about/arect"style="text-decoration:underline" >  know more</a></p>
@@ -46,14 +44,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-5">
+                    <div class="col-lg-3 col-sm-4">
                         <div class="footer_item">
                             <h4>Explore Arect</h4>
                             <ul class="list-unstyled footer_menu">
+                            <li><a href="{{route('missionVision')}}"><span class="fa fa-play"></span> Our Mission & Vision</a>
                                 <li><a href="{{route('services')}}"><span class="fa fa-play"></span> Our services</a>
-                                <!-- <li><a href=""><span class="fa fa-play"></span> Meet our team</a> -->
-                                <!-- <li><a href=""><span class="fa fa-play"></span> Forum</a> -->
-                                <li><a href="{{route('missionVision')}}"><span class="fa fa-play"></span> Our Mission & Vision</a>
                                 <li><a href="{{route('contactus')}}"><span class="fa fa-play"></span> Contact Arects</a>
                                 <!-- <li><a href=""><span class="fa fa-play"></span> Privacy Policy</a>
                                 <li><a href=""><span class="fa fa-play"></span> Arects terms</a>
@@ -61,6 +57,22 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div class="col-lg-5 col-sm-6">
+                        <div class="footer_item">
+                           <h4>Contact us</h4>
+                            <ul class="list-unstyled footer_menu">
+                                <li><a href="#"><span class="fa fa-map-marker"></span>  43A, Emina Crescent,
+                                  Off Toyin Street, <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ikeja, Lagos Nigeria</a>
+                                <li><a href="mailto:info@arectlimited.com.ng?Subject=Welcome to Arects Builders Limited"><span class="fa fa-envelope"></span> info@arectlimited.com.ng</a>
+                                <li><a href="tel:+ 07088494442"><span class="fa fa-phone"></span> +2347088494442</a>
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+
+
                     <!-- <div class="col-lg-3 col-sm-7">
                         <div class="footer_item">
                             <h4>Latest post</h4>
@@ -72,17 +84,7 @@
                             </ul>
                         </div>
                     </div> -->
-                    <div class="col-lg-3 col-sm-5">
-                        <div class="footer_item">
-                            <h4>Contact us</h4>
-                            <ul class="list-unstyled footer_contact">
-                                <li><a href=""><span class="fa fa-map-marker"></span>43A, Emina Crescent,
-                                  Off Toyin Street, Ikeja, Lagos Nigeria</a></li>
-                                <li><a href="mailto:info@arectlimited.com.ng?Subject=Welcome to Arects Builders Limited" target="_top"><span class="fa fa-envelope"></span>info@arectlimited.com.ng</a></li>
-                                <li><a href="tel:+ 07088494442"><span class="fa fa-mobile"></span><p>+2347088494442 <br /></p></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                 
                 </div>
             </div><!-- Footer top end -->
             <p> Copyright &copy; 2021 <span style="color: #ff5821">  Brilliant Developers   - All Right Reserved</span></p>

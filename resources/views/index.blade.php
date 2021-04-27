@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="about_content" style="padding-top:90px!important; ">
-                            <img src="/arects/images/safety2.PNG" alt="" style="width:400px;height:600px" id="imgg"/>
+                            <img src="/arects/images/sv.PNG" alt="" style="width:400px;height:600px" id="imgg"/>
                         </div>
                     </div>
                 </div>

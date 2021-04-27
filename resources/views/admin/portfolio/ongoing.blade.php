@@ -4,11 +4,11 @@
             <div class="block-header">
                 <div class="row">
                     <div class="col-lg-6 col-md-8 col-sm-12">
-                        <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>Past Projects</h2>
+                        <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>Ongoing Projects</h2>
                         <ul class="breadcrumb">
-                                                      
-                            <li class="breadcrumb-item">Past </li>
-                            <li class="breadcrumb-item active"> Projects</li>
+                                                   
+                            <li class="breadcrumb-item">Ongoing</li>
+                            <li class="breadcrumb-item active">Projects</li>
                         </ul>
                     </div>            
                    
@@ -19,20 +19,20 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="header">
-                        @if(session()->has('response'))
+                        @if(session()->has('alert'))
                             <div class="alert alert-success">
-                                {{ session()->get('response') }}
+                                {{ session()->get('alert') }}
                             </div>
                         @endif
                         </div>
                         <div class="body">
-                          <h3>Past Projects</h3>
-                         <form id="basic-form" method="POST" action="{{route('portfolio')}}" novalidate enctype='multipart/form-data'>
+                          <h3>Ongoing Projects</h3>
+                        <form id="basic-form" method="POST" action="{{route('ongoingProjects')}}" novalidate enctype='multipart/form-data'>
                              @csrf
-                               
+                           
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <input type="text" name="descript" class="form-control" required>
+                                    <input type="text" name="name" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">

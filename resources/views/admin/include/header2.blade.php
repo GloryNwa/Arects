@@ -4,7 +4,7 @@
 
 <!-- Mirrored from www.wrraptheme.com/templates/lucid/hr/html/light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Jul 2020 12:07:25 GMT -->
 <head>
-<title>Admin DASHBOARD</title>
+<title>Arect DASHBOARD</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -52,10 +52,10 @@
             </div>
             
             <div class="navbar-right">
-                <form id="navbar-search" class="navbar-form search-form">
+                <!-- <form id="navbar-search" class="navbar-form search-form">
                     <input value="" class="form-control" placeholder="Search here..." type="text">
                     <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
-                </form>               
+                </form>                -->
 
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav">                        
@@ -95,27 +95,20 @@
                 <div class="tab-pane animated fadeIn active" id="hr_menu">
                     <nav class="sidebar-nav">
                         <ul class="main-menu metismenu">
-                            <li class="active"><a href="{{route('dashboard')}}"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
-                            
-
-                        
-                          
+                            <li class="active"><a href="{{route('dashboard')}}"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>  
                                
                     </nav> 
                 </div>
                 <div class="tab-pane animated fadeIn" id="project_menu">
                     <nav class="sidebar-nav">
                         <ul class="main-menu metismenu">
-                        <li><a href="/upload/banner/image"><i class="icon-arrow-up"></i><span>Upload Banner</span></a></li>
-                            <!-- <li><a href="/manage/report"><i class="icon-arrow-up"></i><span>Manage Report</span></a></li> -->
-                            <li><a href="/upload/about"><i class="icon-arrow-up"></i><span>Upload About</span></a></li>
-                            <li><a href="/upload/services"><i class="icon-arrow-up"></i><span>Upload Services</span></a></li>
-                            <li><a href="/upload/portfolio"><i class="icon-arrow-up"></i><span>Upload Portfolio</span></a></li>
-                            <li><a href="/upload/client"><i class="icon-arrow-up"></i><span>Upload Client</span></a></li>
-                            <!-- <li><a href="/manage/report"><i class="icon-settings"></i><span>Manage Report</span></a></li> -->
-                            
-                            <li><a href="/task/board"><i class="icon-tag"></i>Taskboard</a></li>
-                            <!-- <li><a href="app-tickets.html"><i class="icon-screen-tablet"></i>Tickets</a></li> -->
+                        <li><a href="/upload/client"><i class="icon-arrow-up"></i><span>Clients</span></a></li>
+                
+                            <li><a href="/ongoing/projects"><i class="icon-arrow-up"></i><span>Ongoing Projects</span></a></li>
+
+                            <li><a href="/past/projects"><i class="icon-arrow-up"></i><span>Past Projects</span></a></li>
+
+                           
                         </ul>                        
                     </nav>                    
                 </div>
@@ -123,21 +116,12 @@
                 <div class="tab-pane animated fadeIn" id="sub_menu">
                     <nav class="sidebar-nav">
                         <ul class="main-menu metismenu">
-                            <!-- <li>
-                                <a href="#Blog" class="has-arrow"><i class="icon-globe"></i> <span>Blog</span></a>
-                                <ul>                                    
-                                    <li><a href="blog-dashboard.html">Dashboard</a></li>
-                                    <li><a href="blog-post.html">New Post</a></li>
-                                    <li><a href="blog-list.html">Blog List</a></li>
-                                    <li><a href="blog-details.html">Blog Detail</a></li>
-                                </ul>
-                            </li> -->
+                           
                             <ul class="main-menu metismenu">
-                             <li><a href="/add/todo"><i class="fa fa-arrows-alt"></i><span>Add ToDo</span></a></li>
-                            <li><a href="/manage/todo"><i class="icon-settings"></i><span>Manage ToDo</span></a></li>
+                             <li><a href="/manage/clients"><i class="icon-settings"></i><span>Manage Clients</span></a></li>
+                            <li><a href="/manage/ongoing/projects"><i class="icon-settings"></i><span>Manage Ongoing Projects</span></a></li>
                             
-                            <li><a href="/task/board"><i class="icon-tag"></i>Taskboard</a></li>
-                            <!-- <li><a href="app-tickets.html"><i class="icon-screen-tablet"></i>Tickets</a></li> -->
+                            <li><a href="/manage/past/projects"><i class="icon-settings"></i>Manage Past Projects</a></li>
                         </ul>  
                            
                         </ul>

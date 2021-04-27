@@ -7,7 +7,7 @@
                         <h2><a class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Manage</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><i class="icon-home"></i></li>
-                            <li class="breadcrumb-item active">Past Projects</li>
+                            <li class="breadcrumb-item active">Clients</li>
                         </ul>
                     </div>      
 
@@ -17,7 +17,7 @@
 
             <div class="row clearfix">
 
-                <div class="col-md-12">
+            <div class="col-md-12">
                     <div class="card">
 
                         <div class="body">
@@ -26,43 +26,93 @@
                                     <thead class="thead-blue"style="background:#007bff;color:white">
                                         <tr>
                                             <th>Name</th>
-                                            <th>File</th>
+                                            <th>file</th>
                                             
                                             <th>Delete</th>
                                         </tr>
                                     </thead>
-                                    @if(session()->has('response'))
-                                        <div class="alert alert-success">
-                                            {{ session()->get('response') }}
-                                        </div>
-                                    @endif
+                                  
                                     <tbody>
-                                    @if(count($portfolio)>0)
+
+                                    @if(count($clients)>0)
                                     <?php $x = 1;?>
-                                      @foreach($portfolio as $port)
+                                      @foreach($clients as $client)
                                         <tr>
-                                        <td>{{$port->descript}}</td>
-                                            <td> <img src="{{$port->file}}" id="image" width="200px;height:200px" class="avatar" alt=""><td>
+                                        <td>{{$client->name}}</td>
+                                            <td> <img src="{{$client->file}}" id="image" width="200px; height:200px" class="avatar" alt=""><td>
 
                                                <button class="btn btn-sm btn-icon btn-pure btn-default on-default button-remove"
-                                            data-toggle="tooltip"  data-original-title="Remove"><a onclick="return confirm('Are you really sure?')" href='/delete/portfolio/{{$port->id}}'><i class="icon-trash" aria-hidden="true"></i>
+                                            data-toggle="tooltip"  data-original-title="Remove"><a onclick="return confirm('Are you really sure?')" href='/delete/client/{{$client->id}}'><i class="icon-trash" aria-hidden="true"></i>
                                                 </a></a>
                                            </td>
                                         </tr>
                                         @endforeach
                                         @else
 
-                                <div class="alert alert-info">No Post Found</div>
+                                <div class="alert alert-info">No Information Found</div>
 
                                 @endif
-                                </tbody>
-                            </table>
-                            {{$portfolio->links()}}
-                            </div>
+                                   
+                            </tbody>
+                        </table>
+                        {{$clients->links()}}
+                     </div>
+                  </div>
+               </div>
+          </div>
+
+
+                <!-- <div class="col-lg-4">
+                    <div class="card">
+                        <div class="body">
+                            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addevent">Add New Event</button>
                         </div>
                     </div>
-                </div>
+                    <div class="card">
+                        <div class="body">
+                            <div class="event-name row">
+                                <div class="col-3 text-center">
+                                    <h4>11<span>Dec</span><span>2018</span></h4>
+                                </div>
+                                <div class="col-9">
+                                    <h6>Conference</h6>
+                                    <p>Mobile World Congress 2018</p>
+                                    <address><i class="fa fa-map-marker"></i> 4 Goldfield Rd. Honolulu, HI 96815</address>
+                                </div>
+                            </div>                            
+                           
+                         
+                            <div class="event-name row">
+                                <div class="col-3 text-center">
+                                    <h4>16<span>Dec</span><span>2018</span></h4>
+                                </div>
+                                <div class="col-9">
+                                    <h6>Repeating Event</h6>
+                                    <p>It is a long established fact that a reader will be distracted</p>
+                                    <address><i class="fa fa-map-marker"></i> 123 6th St. Melbourne, FL 32904</address>
+                                </div>
+                            </div>
+                            <div class="event-name row">
+                                <div class="col-3 text-center">
+                                    <h4>28<span>Dec</span><span>2018</span></h4>
+                                </div>
+                                <div class="col-9">
+                                    <h6>Google</h6>
+                                    <p>Google Hardware and Pixel 2 Launch</p>
+                                    <address><i class="fa fa-map-marker"></i> 514 S. Magnolia St. Orlando, FL 32806</address>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                   <div class="card">
+                        <div class="body">
+                            <button type="button" class="btn btn-primary btn-block"><a href="/manage/events/" style="color:white">Manage Event</a></button>
+                        </div>
+                    </div> -->
                 </div> 
+
 
             </div>
         </div>

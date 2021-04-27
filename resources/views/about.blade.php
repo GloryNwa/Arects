@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="about_content" style="padding-top:90px!important">
-                            <img src="/arects/images/ab.PNG" alt="" style="width:400px"/>
+                            <img src="/arects/images/buildd.jpg" alt="" style="width:450px;height:650px"/>
                         </div>
                     </div>
                 </div>

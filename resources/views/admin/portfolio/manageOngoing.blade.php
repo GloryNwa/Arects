@@ -7,7 +7,7 @@
                         <h2><a class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Manage</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><i class="icon-home"></i></li>
-                            <li class="breadcrumb-item active">Past Projects</li>
+                            <li class="breadcrumb-item active">Ongoing Projects</li>
                         </ul>
                     </div>      
 
@@ -17,7 +17,7 @@
 
             <div class="row clearfix">
 
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <div class="card">
 
                         <div class="body">
@@ -27,25 +27,26 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>File</th>
-                                            
+                                           
                                             <th>Delete</th>
                                         </tr>
                                     </thead>
+                                  
                                     @if(session()->has('response'))
                                         <div class="alert alert-success">
                                             {{ session()->get('response') }}
                                         </div>
                                     @endif
                                     <tbody>
-                                    @if(count($portfolio)>0)
+                                    @if(count($projects)>0)
                                     <?php $x = 1;?>
-                                      @foreach($portfolio as $port)
+                                      @foreach($projects as $project)
                                         <tr>
-                                        <td>{{$port->descript}}</td>
-                                            <td> <img src="{{$port->file}}" id="image" width="200px;height:200px" class="avatar" alt=""><td>
+                                        <td>{{$project->name}}</td>
+                                            <td> <img src="{{$project->file}}" id="image" width="200px;height:200px" class="avatar" alt=""><td>
 
                                                <button class="btn btn-sm btn-icon btn-pure btn-default on-default button-remove"
-                                            data-toggle="tooltip"  data-original-title="Remove"><a onclick="return confirm('Are you really sure?')" href='/delete/portfolio/{{$port->id}}'><i class="icon-trash" aria-hidden="true"></i>
+                                            data-toggle="tooltip"  data-original-title="Remove"><a onclick="return confirm('Are you really sure?')" href='/delete/projects/{{$project->id}}'><i class="icon-trash" aria-hidden="true"></i>
                                                 </a></a>
                                            </td>
                                         </tr>
@@ -57,13 +58,13 @@
                                 @endif
                                 </tbody>
                             </table>
-                            {{$portfolio->links()}}
+                            {{$projects->links()}}
+
                             </div>
                         </div>
                     </div>
                 </div>
-                </div> 
-
+                </div>
             </div>
         </div>
     </div>

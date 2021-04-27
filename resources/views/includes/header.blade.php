@@ -84,8 +84,8 @@
                             <li><a href="/">Home</a></li>                    
                             <li><a href="{{route('about')}}">About Us</a></li>
                             <li><a href="{{route('services')}}">Services</a></li>
-                            <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                             <li><a href="{{route('clients')}}">Our Clients</a></li>
+                            <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                             <li><a href="{{route('contactus')}}">Contact Us</a></li>
                         </ul>
                     </div>

@@ -1,23 +1,21 @@
 @include('includes/header')<!-- Header end -->
 
-    <br><br>
 
       <!-- Portfolio -->
       <section id="portfolio">
-        <div class="container portfolio_area text-center">
-            <h2>Contact Us Today</h2>
+        <div class="container portfolio_area ">
+            <h2 style="margin-left:30px">Contact Us Today</h2>
           
 <!--          
-            <div id="filters">
+             <div id="filters">
                 <button class="button is-checked" data-filter="*">Show All</button>
                 <button class="button" data-filter=".buildings">Buildings</button>
                 <button class="button" data-filter=".interior">Interior Design</button>
                 <button class="button" data-filter=".isolation">Isolation</button>
                 <button class="button" data-filter=".plumbing">Plumbing</button>
-            </div> -->
-            <!-- Portfolio grid -->		
-            <div class="grid" style="">
-                <div ></div>
+            </div>
+             Portfolio grid -->		
+            <div class="" style="">
                 
                 <form role="form" class=" col-md-10" action="/contact" method="POST" >
                 @csrf
@@ -38,11 +36,11 @@
                     <div class="form-group">
                         <textarea class="form-control"  name="message" rows="5" id="msg" placeholder="Message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-default btn-block" style="background:#c4c4c4">Submit</button>
+                    <button type="submit" class="btn btn-default btn-block" style="background:#c0c0c0; color:#fff"><strong>Submit</strong></button>
                 </form>	
             </div><!-- Portfolio grid end -->
         </div>
-    </div>
+     </div>
     </section><!-- Portfolio end --><!-- Portfolio end --><!-- About end -->
 
         <!-- Why us -->

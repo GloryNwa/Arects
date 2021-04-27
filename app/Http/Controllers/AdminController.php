@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\URL;
 use Auth;
 use DB;
+use App\Contact;
 
 class AdminController extends Controller
 {
@@ -21,15 +22,24 @@ class AdminController extends Controller
     }
 
     public function dashboard(){
-
-        return view('admin.dashboard');
+        $contacts = Contact::orderBy('id','desc')->paginate(10);
+        $countContact = Contact::count();
+        return view('admin.dashboard',['contacts'=> $contacts, 'countContact' => $countContact]);
       }
 
+
+
+      public function deletecontact($id){
+
+        Contact::where('id', $id)->delete($id);
+        return redirect('/dashboard')->with('message', 'Contact deleted duccessfully');
+    }
+    
       
 
 ////////////////////////////Todo///////////////////////////////////////////////////////
 public function addTodo(){
-    return view('admi.todo');
+    return view('admim.todo');
 }
 
 public function manageTodo(){
