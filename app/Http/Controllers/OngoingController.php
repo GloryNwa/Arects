@@ -13,9 +13,8 @@ class OngoingController extends Controller
 {
 
     public function ongoing(){
-      $port = Ongoing::orderBy('id','desc');
-      dd($port);exit;
-      return view('portfolios',['port'=>$port]);
+
+      return view('admin.portfolio.ongoing');
    }
 
      //////////////////////////Ongoing Project Method////////////////////////////////  

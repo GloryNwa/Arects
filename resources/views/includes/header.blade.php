@@ -58,7 +58,7 @@
                         <li><a href="#"><span class="fa fa-clock-o"></span> Mon - Sat 9:am - 9:pm</a></li>
                     </ul>
                     <ul class="list-inline social_icon">
-                        <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                        <!-- <li><a href=""><span class="fa fa-facebook"></span></a></li> -->
                         <li><a href=""><span class="fa fa-twitter"></span></a></li>
                         <li><a href=""><span class="fa fa-linkedin"></span></a></li> 
                         <!-- <li><a href=""><span class="fa fa-dribbble"></span></a></li>  -->

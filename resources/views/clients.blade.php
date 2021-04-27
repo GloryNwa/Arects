@@ -1,32 +1,7 @@
 @include('includes/header')
 
         <!-- About -->
-        <section id="services">
-            <div class="container"style="background-color:
-#ebecfd">
-                <h2>OUR Clients</h2>
-               
-                <div class="row">
-
-
-                @if(count($clients)>0)               
-                  @foreach($clients as $client)
-                    <div class="col-md-4" >
-                        <div class="service_item">
-                        <img src="{{$client->file}}" alt="Our Services" style="height:260px"/>
-                            <h3 style="text-align:center">{{$client->name}}</h3>
-                            <p></p>
-                            <!-- <button class="btn know_btn"  data-toggle="modal" data-target="#exampleModalCenter">know more</button> -->
-                        </div>
-                    </div>
-                @endforeach
-               @else
-                <div class="alert alert-info">No Clent Found, Check back lataer</div>
-                @endif
-             </div>
-            </div>
-        </section><!-- About end -->
-
+       
         <!-- Why us -->
         
 

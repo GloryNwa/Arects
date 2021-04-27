@@ -14,10 +14,12 @@ class PortfolioController extends Controller
 {
 
     public function portfolios(){
-      $data['portfolio'] = Portfolio::orderBy('id','desc')->paginate(10);
-      $data['ongoing']   = Ongoing::orderBy('id','desc')->paginate(10);
+      
+      // dd($past);exit;
+      $data['ongoing'] = Ongoing::orderBy('id','desc')->paginate(10);
+      $past= Portfolio::orderBy('id','desc')->paginate(10);
    
-        return view('portfolios',$data);
+        return view('portfolios',$data,['past'=>$past]);
    }
 
 //    public function ongoing(){

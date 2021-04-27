@@ -28,14 +28,14 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-7">
                         <div class="footer_item">
-                            <h4>About Arect</h4>
+                            <!-- <h4>About Arect</h4> -->
                             <img class="logo" src="/arects/images/logoo.png" alt="Construction" style="width:300px"/>
                             <p>We are Certified Engineers, CREATIVE & PROFESSIONAL<br>
                             O</span>ver the years, we have established a proven track record of managing and
                                     delivering construction projects on time, as well as an operational strategy to maintain a full profile of services  >>><a href="/about/arect"style="text-decoration:underline" >  know more</a></p>
 
                             <ul class="list-inline footer_social_icon">
-                                <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                                <!-- <li><a href=""><span class="fa fa-facebook"></span></a></li> -->
                                 <li><a href=""><span class="fa fa-twitter"></span></a></li>
                                 <!-- <li><a href=""><span class="fa fa-youtube"></span></a></li>
                                 <li><a href=""><span class="fa fa-google-plus"></span></a></li> -->
@@ -87,7 +87,7 @@
                  
                 </div>
             </div><!-- Footer top end -->
-            <p> Copyright &copy; 2021 <span style="color: #ff5821">  Brilliant Developers   - All Right Reserved</span></p>
+            <!-- <p> Copyright &copy; 2021 <span style="color: #ff5821">  Brilliant Developers   - All Right Reserved</span></p> -->
             <!-- Footer bottom -->
             <div class="footer_bottom text-center">
                 <p class="wow fadeInRight">

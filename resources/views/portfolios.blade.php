@@ -15,59 +15,72 @@
                 <button class="button" data-filter=".plumbing">Plumbing</button>
             </div> -->
             <!-- Portfolio grid -->		
-     <div class="grid">
-         <div class="grid-sizer"></div>
-         @if(count( $ongoing)> 0)               
-            @foreach( $ongoing as $project)
+            <div class="grid">
+                <div class="grid-sizer"></div>
 
-                <div class="grid-item grid-item--width2 grid-item--height2 buildings plumbing  interior">
+                @if(count( $ongoing)> 0)               
+              @foreach( $ongoing as $project)
+
+                <div class="grid-item buildings interior isolation">
                     <img alt="" src="{{$project->file}}">
+
                     <div class="portfolio_hover_area">
-                        <a class="fancybox" href="{{$project->file}}" data-fancybox-group="gallery" title="{{$project->name}}"><span class="fa fa-search"></span></a>
-                        <a href="#"><span class="fa fa-link"></span></a>
-                    </div>  
+                        <a class="fancybox" href="{{$project->file}}" data-fancybox-group="gallery" title="{{$project->name}}"><span class="fa fa-eye"></span></a>
+                        <!-- <a href="#"><span class="fa fa-link"></span></a> -->
+                    </div>   
                 </div>
                 @endforeach
                @else
                 <div class="alert alert-info">No available ongoing project, check back lataer</div>
                 @endif
 
- 
+
+            
             </div><!-- Portfolio grid end -->
-            </div>
-    </section>
 
-            <br><br>
-
-            <section id="portfolio">
-        <div class="container portfolio_area text-center">
-            <h2>Past Projects</h2>
-            <hr>
-            <div class="grid">
-                <div class="grid-sizer"></div>
-               
-            @if(count($portfolio)> 0)               
-               @foreach($portfolio as $client)
-
-                <div class="grid-item grid-item--width2 grid-item--height2 buildings plumbing  interior">
-                    <img alt="" src="{{$client->file}}">
-                    <div class="portfolio_hover_area">
-                        <a class="fancybox" href="{{$client->file}}" data-fancybox-group="gallery" title="{{$client->descript}}"><span class="fa fa-search"></span></a>
-                        <a href="#"><span class="fa fa-link"></span></a>
-                    </div>  
-                </div>
-                @endforeach
-               @else
-                <div class="alert alert-info">No available pastproject, check back lataer</div>
-                @endif
-
-
+            
 
             </div>
         </div>
     </section><!-- Portfolio end --><!-- Portfolio end --><!-- About end -->
 
         <!-- Why us -->
+
+
+        <section id="portfolio">
+        <div class="container portfolio_area text-center">
+            <h2>Past Projects</h2>
+            <hr>
+            <!-- Portfolio grid -->		
+            <div class="grid">
+                <div class="grid-sizer"></div>
+
+                @if(count($past)> 0)               
+              @foreach($past as $port)
+
+                <div class="grid-item buildings interior isolation">
+                    <img alt="" src="{{$port->file}}">
+
+                    <div class="portfolio_hover_area">
+                        <a class="fancybox" href="{{$port->file}}" data-fancybox-group="gallery" title="{{$port->descript}}"><span class="fa fa-eye"></span></a>
+                        <!-- <a href="#"><span class="fa fa-link"></span></a> -->
+                    </div>   
+                </div>
+                @endforeach
+               @else
+                <div class="alert alert-info">No available ongoing project, check back lataer</div>
+             @endif
+
+
+            
+            </div><!-- Portfolio grid end -->
+
+            
+
+            </div>
+        </div>
+    </section><!-- Portfolio end --><!-- Portfolio end --><!-- About end -->
+
         
 
 
